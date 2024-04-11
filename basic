@@ -1,0 +1,59 @@
+/*https://www.hackerrank.com/challenges/plus-minus/problem*/
+function plusMinus(arr) {
+let n_negative = 0
+let n_zero = 0
+let n_positive = 0
+
+for (let i = 0; i < arr.length; i++){
+    if (arr[i] < 0)
+        n_negative++
+
+    else if (arr[i] == 0)
+        n_zero++
+
+    else
+        n_positive++
+}
+
+/*https://www.hackerrank.com/challenges/staircase/problem*/
+function staircase(n) {
+let space = ''
+
+for (let i = 1; i <= n; i++){
+    for (let j = i + 1; j <= n; j++){
+        space = space + ' '
+    }
+
+    for (let h = 1; h <= i; h++){
+        space = space + '#'
+    }
+    console.log(''+space);
+    space = '';
+}
+
+/*https://www.hackerrank.com/challenges/camelcase/problem*/
+function camelcase(s) {
+let n_word = 1
+
+for (let i = 0; i < s.length; i++){
+    if (s[i] === s[i].toUpperCase() && i !== 0){
+        n_word++
+    }
+}
+
+return n_word
+}
+
+
+/*
+https://www.hackerrank.com/challenges/african-cities/submissions/code/378337949
+select ci.name from city ci
+inner join country co on co.code = ci.countrycode
+where co.continent = 'Africa';
+*/
+
+/*
+https://www.hackerrank.com/challenges/japanese-cities-name/submissions/code/378337989
+select name from city
+where countrycode = 'JPN';
+*/
